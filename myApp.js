@@ -13,7 +13,7 @@ app.get("/", function (request, response) {
 });
 app.use(
   helmet.frameguard({
-    action: "deny",
+    action: 'deny'
   })
 );
 let port = process.env.PORT || 3000;
