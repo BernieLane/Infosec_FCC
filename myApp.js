@@ -16,6 +16,7 @@ app.use(
     maxAge: ninetyDays,
   })
 );
+app.use(helmet.dnsPrefetchControl());
 app.disable("strict-transport-security");
 app.use("/_api", api);
 app.get("/", function (request, response) {
