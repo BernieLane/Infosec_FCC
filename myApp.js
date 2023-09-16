@@ -17,6 +17,7 @@ app.use(
   })
 );
 app.use(helmet.dnsPrefetchControl());
+app.use(helmet.noCache());
 app.disable("strict-transport-security");
 app.use("/_api", api);
 app.get("/", function (request, response) {
