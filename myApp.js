@@ -11,6 +11,7 @@ app.use("/_api", api);
 app.get("/", function (request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
+app.use(helmet({ xFrameOptions: { action: "deny" } }));
 let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Your app is listening on port ${port}`);
